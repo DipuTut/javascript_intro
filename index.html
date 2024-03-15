@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>User Input</title>
+</head>
+<body>
+    <h2>User Input anfragen</h2>
+    <label for="userInput">Geben Sie heir einen Text ein: </label>
+    <input type="text" id="userInput" placeholder="Ihre Eingabe hier.">
+    <button onclick="showInput()">Meine Eingabe anzeigen</button>
+
+    <h2>User Input anzeigen</h2>
+    <p id="output">Ihre Eingabe erscheint hier:</p> 
+    
+    <script>
+        function showInput() {
+
+            var userInput = document.getElementById("userInput").value;
+
+            document.getElementById("output").textContent="Ihre Eingabe war: " + userInput;
+
+
+        }
+
+
+    </script>
+
+    </body>
+</html>
