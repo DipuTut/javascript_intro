@@ -1,7 +1,7 @@
 // Das ist ein einzeiliger Kommentar
 // Gebe Hello World! in der Konsole aus.
 console.log("Hello World!");
-
+console.log('tests')
 /* 
 Das ist ein
 mehrzeiliger Kommentar.
