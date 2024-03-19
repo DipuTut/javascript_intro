@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farben_Dropdown</title>
+</head>
+<body>
+    <h2>Wähle eine Farbe</h2>
+    <select id="farbenDropdown">
+        <!-- <option>Blue</option>
+        <option>Rot</option> -->
+    </select>
+
+    <script>
+        const farben = ["Rot", "Gelb", "Blau", "Grün"];
+
+        function optionenErzeugen() {
+            const dropdown = document.getElementById("farbenDropdown");
+            farben.forEach(farbe => {
+                const option = document.createElement("option");
+                option.value = farbe.toLowerCase();
+                option.textContent = farbe;
+                dropdown.appendChild(option);
+
+            });
+        }
+
+        window.onload = optionenErzeugen();
+    </script>
+
+    
+</body>
+</html>

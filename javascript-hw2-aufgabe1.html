@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punktzahl Auswertung</title>
+</head>
+<body>
+    <form id="meinFormular">
+        <label for="userinput">Gib dein Punkzahl ein (zwischen 1 und 100)</label>
+        <input type="number" id="userinput" name="Eingabe">
+        <input type="submit" value="Absenden">
+    </form>
+    <p id="ergebnis"></p>
+
+    <script>
+        document.getElementById("meinFormular").addEventListener("submit", function(e){
+
+            e.preventDefault();
+            let punkzahl = parseInt(document.getElementById("userinput").value);
+
+        if ( punkzahl>90 && 100>=punkzahl) {
+        document.getElementById("ergebnis").textContent = "Sehr gut" ;        
+            } else if (punkzahl >80 && 90>=punkzahl) {
+        document.getElementById("ergebnis").textContent = "Gut" ;  
+        } 
+        else if (punkzahl >=70 && 80>=punkzahl) {
+        document.getElementById("ergebnis").textContent = "Befriedigend" ;  
+        } 
+        else if (punkzahl >=60 && 70>punkzahl) {
+        document.getElementById("ergebnis").textContent = "Ausreichend" ;  
+        } 
+        else if (punkzahl <60 && punkzahl >0) {
+        document.getElementById("ergebnis").textContent = "Nicht bestanden" ;  
+        } 
+        else {
+        document.getElementById("ergebnis").textContent = "Ungültige Nummer" ;  
+        } 
+
+        });
+        
+
+    </script>
+
+    
+</body>
+</html>

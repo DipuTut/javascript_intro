@@ -1,0 +1,17 @@
+{
+    "editor.fontSize": 16,
+    "diffEditor.diffAlgorithm": "advanced",
+    "workbench.commandPalette.experimental.askChatLocation": "chatView",
+    "workbench.list.defaultFindMatchType": "fuzzy",
+    "workbench.activityBar.iconClickBehavior": "toggle",
+    "workbench.preferredHighContrastColorTheme": "Visual Studio Dark",
+    "workbench.preferredHighContrastLightColorTheme": "Kimbie Dark",
+    "workbench.preferredLightColorTheme": "Quiet Light",
+    "workbench.colorCustomizations": {
+
+    },
+    "workbench.colorTheme": "Kimbie Dark",
+    "workbench.preferredDarkColorTheme": "Red",
+    "workbench.iconTheme": "vs-seti",
+    "workbench.sideBar.location": "right"
+}

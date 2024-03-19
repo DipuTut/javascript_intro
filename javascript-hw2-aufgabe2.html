@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahrkartenpreiskategorien</title>
+</head>
+<body>
+    <form id="meinFormular">
+        <label for="userinput">Wie alt sind Sie?</label>
+        <input type="number" id="userinput" name="Eingabe">
+        <input type="submit" value="Absenden">
+    </form>
+    <p id="ergebnis"></p>
+
+    <script>
+        document.getElementById("meinFormular").addEventListener("submit", function(e){
+
+            e.preventDefault();
+            let alter = parseInt(document.getElementById("userinput").value);
+
+        if (alter >= 67 ) {
+        document.getElementById("ergebnis").textContent = "Die Fahrt ist Seniorenpreis" ;        
+            } else if (alter >= 18 && 66 >= alter) {
+        document.getElementById("ergebnis").textContent = "Die Fahrt ist Vollpreis" ;  
+        } 
+        else if (alter >= 6 && 17 >= alter) {
+        document.getElementById("ergebnis").textContent = "Die Fahrt ist Kinderpreis" ;  
+        } 
+        else if (alter < 6 && 0 <= alter) {
+        document.getElementById("ergebnis").textContent = "Die Fahrt ist kostenlos " ;  
+        }  else {
+        document.getElementById("ergebnis").textContent = "Ungültige Alter" ;  
+        } 
+
+        });
+        
+
+    </script>
+
+    
+</body>
+</html>
