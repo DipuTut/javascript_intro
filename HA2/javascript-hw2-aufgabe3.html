@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deutsche Bahn</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Deutsche Bahntickets & Angebote</h1>
+        <nav>
+            <ul>
+                <li><a href="javascript-hw2-aufgabe3.html">Home</a></li>
+                <li><a href="javascript-hw2-aufgabe3.html">Tickets & Angebote</a></li>
+                <li><a href="javascript-hw2-aufgabe3.html">Meine Reisen</a></li>
+                <li><a href="javascript-hw2-aufgabe3.html">Info & Passenger Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <form id="meinFormular">
+        <label for="userinput">Wie alt sind Sie?</label>
+        <input type="number" id="userinput" name="Eingabe">
+        <input type="submit" value="Absenden">
+    </form>
+    <h2 id="ergebnis">
+
+    </h2>
+
+    <script>
+
+        document.getElementById("meinFormular").addEventListener("submit", function (e) {
+
+            e.preventDefault();
+            let alter = parseInt(document.getElementById("userinput").value);
+            console.log(alter)
+            var showText = alter !== ''
+            document.getElementById('age_text').innerHTML = ''
+            if (alter >= 67) {
+                document.getElementById("ergebnis").textContent = "Die Fahrt ist Seniorenpreis";
+            } else if (alter >= 18 && 66 >= alter) {
+                document.getElementById("ergebnis").textContent = "Die Fahrt ist Vollpreis";
+            }
+            else if (alter >= 6 && 17 >= alter) {
+                document.getElementById("ergebnis").textContent = "Die Fahrt ist Kinderpreis";
+            }
+            else if (alter < 6 && 0 <= alter) {
+                document.getElementById("ergebnis").textContent = "Die Fahrt ist kostenlos ";
+            } else {
+                document.getElementById("ergebnis").textContent = "Ungültige Alter";
+            }
+
+            if (showText) {
+                const ul = document.createElement('ul');
+                ["Wenn eine Person junger als 6 ist, ist die Fahrt kostenlos.",
+                    "Wenn eine Person zwischen 6 und 17 Jahre alte ist, dann fährt man zum Kinderpreis.",
+                    "Wenn eine Person zwischen 18 und 66 Jahre alt ist, dann fährt man zum Vollpreis.",
+                    "Wenn eine Person älter als 67 ist, dann fährt man zum Seniorenpreis."
+                ].map(text => {
+                    const li = document.createElement('li')
+                    li.innerText = text
+                    document.getElementById('age_text').append(li)
+                })
+            }
+        });
+
+
+    </script>
+    <h3>
+        <ul id="age_text">
+        </ul>
+    </h3>
+
+
+</body>
+
+</html>
